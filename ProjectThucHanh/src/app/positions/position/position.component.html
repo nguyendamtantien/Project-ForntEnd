@@ -1,0 +1,14 @@
+<h1 class="display-4">Position</h1>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <div class="form-group">
+    <input name="Name" #Name="ngModel" [(ngModel)]="pservice.formdata.Name" class="form-control" placeholder="name position" required> 
+  <div *ngIf="Name.invalid && Name.touched" class="validation-error">This field is required.</div>
+  </div>
+  <div class="form-group">
+    <input name="id" #id="ngModel" [(ngModel)]="pservice.formdata.id" class="form-control" placeholder="ID position" required>
+    <div *ngIf="id.invalid && id.touched" class="validation-error">This field is required.</div>
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
+  </div>
+</form>

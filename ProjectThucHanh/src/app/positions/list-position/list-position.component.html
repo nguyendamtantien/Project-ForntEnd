@@ -1,0 +1,17 @@
+<div class="search-hero">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search Key Word">
+</div>
+<table class="table table-hover">
+    <thead>
+      <th>Name</th>
+      <th>ID</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pos of positionList | async | filter:searchText ">
+        <td (click)="onEdit(pos)">{{pos.Name}}</td>
+        <td (click)="onEdit(pos)">{{pos.id}}</td>
+        <td><a class="btn text-danger" (click)="onDelete(pos.id)"><i class="fa fa-trash"></i></a></td>
+      </tr>
+    </tbody>
+  </table>
