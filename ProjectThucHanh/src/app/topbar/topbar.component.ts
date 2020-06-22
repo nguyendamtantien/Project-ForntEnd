@@ -10,7 +10,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class TopbarComponent implements OnInit {
   displayName:string="";
-  constructor(private userService: UserService,private fauthService: AuthService) { }
+  constructor(private userService: UserService,private authService: AuthService) { }
 
   ngOnInit() {
     this.userService.getCurrentUser()
@@ -19,7 +19,7 @@ export class TopbarComponent implements OnInit {
         console.log(this.displayName);
   }
   Logout(){
-    this.fauthService.logout();
+    this.authService.logout();
     location.href="/login";
   }
 }

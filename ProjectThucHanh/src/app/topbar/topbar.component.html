@@ -152,10 +152,11 @@
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small" *ngIf="displayName">Chào bạn {{displayName}}</span>
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small" *ngIf="!displayName">Chưa Đăng Nhập</span>
-                <img class="img-profile rounded-circle">
+                <!-- <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(authService.userData.photoURL) ? authService.userData.photoURL : '/assets/dummy-user.png'}}60x60"
+              alt="{{authService.userData.displayName}}"> -->
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="admin/profile">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile
                 </a>
                 <a class="dropdown-item" href="#">

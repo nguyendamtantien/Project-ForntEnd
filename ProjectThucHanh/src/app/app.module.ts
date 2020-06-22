@@ -26,6 +26,8 @@ import { PositionsComponent } from './positions/positions.component';
 import { PositionComponent } from './positions/position/position.component';
 import { ListPositionComponent } from './positions/list-position/list-position.component'
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ForgotPasswordComponent,
     PositionsComponent,
     PositionComponent,
-    ListPositionComponent
+    ListPositionComponent,
+    VerifyEmailComponent
   ],
   imports: [
     Ng2SearchPipeModule,
@@ -56,7 +59,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ToastrModule.forRoot(),
     FormsModule
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
