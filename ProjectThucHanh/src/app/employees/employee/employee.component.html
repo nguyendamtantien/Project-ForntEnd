@@ -3,7 +3,6 @@
   <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
   <div class="form-group">
      <input name="name" #position="ngModel" [(ngModel)]="service.formData.name" class="form-control" placeholder="Name" required>
-  <div *ngIf="name.invalid"></div>
   </div>
   <div class="form-group">
     <input name="code" #fullName="ngModel" [(ngModel)]="service.formData.code" class="form-control" placeholder="Code" required> 
