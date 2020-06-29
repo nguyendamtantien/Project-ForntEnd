@@ -7,17 +7,16 @@
       <th>Code</th>
       <th>Type</th>
       <th>Brand</th>
-      <th>quantity</th>
       <th></th>
     </thead>
     <tbody>
-      <tr *ngFor="let item of list | filter:searchText">
-        <td (click)="onEdit(item)">{{item.name}}</td>
-        <td (click)="onEdit(item)">{{item.code}}</td>
-        <td (click)="onEdit(item)">{{item.type}}</td>
-        <td (click)="onEdit(item)">{{item.brand}}</td>
-        <td (click)="onEdit(item)">{{item.quantity}}</td>
-        <td><a class="btn text-danger" (click)="onDelete(item.id)"><i class="fa fa-trash"></i></a></td>
+      <tr *ngFor="let it of list | filter:searchText">
+        <td (click)="onEdit(it)">{{it.name}}</td>
+        <td (click)="onEdit(it)">{{it.code}}</td>
+        <td (click)="onEdit(it)">{{it.type}}</td>
+        <td (click)="onEdit(it)">{{it.brand}}</td>
+        <!-- <td (click)="onEdit(it)">{{it.quantity}}</td> -->
+        <td><a class="btn text-danger" (click)="onDelete(it.id)"><i class="fa fa-trash"></i></a></td>
       </tr>
     </tbody>
   </table>
