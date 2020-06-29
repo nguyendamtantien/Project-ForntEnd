@@ -3,19 +3,21 @@
 </div>
 <table class="table table-hover">
     <thead>
-      <th>ID - Name</th>
-      <th>Position</th>
-      <th>Mobile</th>
-      <th>Status</th>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Type</th>
+      <th>Brand</th>
+      <th>quantity</th>
       <th></th>
     </thead>
     <tbody>
-      <tr *ngFor="let emp of list | filter:searchText">
-        <td (click)="onEdit(emp)">{{emp.empCode}} - {{emp.fullName}}</td>
-        <td (click)="onEdit(emp)">{{emp.position}}</td>
-        <td (click)="onEdit(emp)">{{emp.mobile}}</td>
-        <td (click)="onEdit(emp)"[ngStyle]="{'color': emp.status==='false' ? 'red' : 'blue' }">{{emp.status}}</td>
-        <td><a class="btn text-danger" (click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a></td>
+      <tr *ngFor="let item of list | filter:searchText">
+        <td (click)="onEdit(item)">{{item.name}}</td>
+        <td (click)="onEdit(item)">{{item.code}}</td>
+        <td (click)="onEdit(item)">{{item.type}}</td>
+        <td (click)="onEdit(item)">{{item.brand}}</td>
+        <td (click)="onEdit(item)">{{item.quantity}}</td>
+        <td><a class="btn text-danger" (click)="onDelete(item.id)"><i class="fa fa-trash"></i></a></td>
       </tr>
     </tbody>
   </table>

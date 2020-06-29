@@ -24,11 +24,11 @@ export class EmployeeComponent implements OnInit {
       form.resetForm();
     this.service.formData = {
       id: null,
-      fullName: '',
-      position: '',
-      empCode: '',
-      mobile: '',
-      status: '',
+      name: '',
+      code: '',
+      type: '', 
+      brand: '',
+      quantity: '',
     }
   }
 
@@ -36,9 +36,9 @@ export class EmployeeComponent implements OnInit {
     let data = Object.assign({}, form.value);
     delete data.id;
     if (form.value.id == null)
-      this.firestore.collection('employees').add(data);
+      this.firestore.collection('items').add(data);
     else
-      this.firestore.doc('employees/' + form.value.id).update(data);
+      this.firestore.doc('items/' + form.value.id).update(data);
     this.resetForm(form);
     this.toastr.success('Submitted successfully', 'EMP. Register');
   }

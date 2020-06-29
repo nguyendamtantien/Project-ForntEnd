@@ -37,7 +37,7 @@ export class EmployeeListComponent implements OnInit {
 
   onDelete(id: string) {
     if (confirm("Are you sure to delete this record?")) {
-      this.firestore.doc('employees/' + id).delete();
+      this.firestore.doc('items/' + id).delete();
       this.toastr.warning('Deleted successfully','EMP. Register');
     }
   }

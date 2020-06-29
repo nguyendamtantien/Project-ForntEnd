@@ -12,7 +12,7 @@ export class EmployeeService {
   constructor(private firestore: AngularFirestore) { }
 
   getEmployees() {
-    return this.firestore.collection('employees').snapshotChanges();
+    return this.firestore.collection('items').snapshotChanges();
   }
   // searchByName(searchValue){
   //   return this.firestore.collection('employees', ref => ref.where('nameToSearch', '>=', searchValue)

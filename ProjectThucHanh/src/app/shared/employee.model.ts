@@ -1,8 +1,8 @@
 export class Employee {
     id: string;
-    fullName: string;
-    empCode: string;
-    position: string;
-    mobile: string;
-    status: string;
+    name: string;
+    code: string;
+    type: string; 
+    brand: string;
+    quantity: string;
 }   
