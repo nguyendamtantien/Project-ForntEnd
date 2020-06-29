@@ -20,7 +20,7 @@ var corsOptions = {
 		res.send([{Name:'KinhDoanh', id:'a01' }, { Name:'VanPhong', id:'a02' }]
 		);
 	});
-	app.route('/api/insert').post((req, res)=>{
+	app.route('/api/acc/insert').post((req, res)=>{
 		console.log('insert Position');
 		console.log('position info:'+req.body);
 		res.send(201, req.body);

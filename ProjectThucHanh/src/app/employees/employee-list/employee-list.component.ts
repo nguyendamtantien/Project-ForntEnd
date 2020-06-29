@@ -25,7 +25,10 @@ export class EmployeeListComponent implements OnInit {
             id: item.payload.doc.id,
             ...item.payload.doc.data() as Employee
           } 
-        })
+        
+        }
+        )
+        console.log(this.list)
       });
     }
   onEdit(emp: Employee) {

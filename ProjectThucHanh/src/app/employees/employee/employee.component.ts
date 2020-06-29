@@ -28,6 +28,7 @@ export class EmployeeComponent implements OnInit {
       position: '',
       empCode: '',
       mobile: '',
+      status: '',
     }
   }
 

@@ -10,6 +10,7 @@ import { PositionsComponent } from './positions/positions.component';
 import { AuthGuard } from './auth.guard';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { ProfileComponent } from './profile/profile.component';
+import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,9 @@ const routes: Routes = [
     {path:"positions", component: PositionsComponent},         
     {path:"employees", component: EmployeesComponent}, 
     {path:"admin", component: MainComponent},   
-    {path:"profile", component: ProfileComponent}
+    {path:"profile", component: ProfileComponent},
+    {path:"", component: EmployeeListComponent},
+    {path:"register", component: RegisterComponent},
     ]},
   // {path:"positions", component: PositionsComponent},
   // {path:"main", component: MainComponent},
@@ -28,7 +31,6 @@ const routes: Routes = [
   {path:"", component: LoginComponent},
   // {path:"employees", component: EmployeesComponent},
   {path:"login", component: LoginComponent},
-  {path:"register", component: RegisterComponent},
   {path:"forgotpassword", component: ForgotPasswordComponent},
   {path:"verify-email",component: VerifyEmailComponent}
 ];

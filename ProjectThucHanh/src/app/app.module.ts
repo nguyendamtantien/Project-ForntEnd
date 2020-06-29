@@ -11,13 +11,12 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
-import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeService } from './shared/employee.service';
-import { FormsModule } from "@angular/forms"
+import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -33,7 +32,6 @@ import { AuthService } from './services/auth.service';
   declarations: [
     AppComponent,
     MainComponent,
-    HomeComponent,
     SidebarComponent,
     TopbarComponent,
     EmployeeComponent,
@@ -57,7 +55,8 @@ import { AuthService } from './services/auth.service';
     AngularFireAuthModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [EmployeeService, AuthService],
   bootstrap: [AppComponent]

@@ -4,4 +4,5 @@ export class Employee {
     empCode: string;
     position: string;
     mobile: string;
+    status: string;
 }   

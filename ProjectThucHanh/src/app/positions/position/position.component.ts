@@ -25,19 +25,19 @@ export class PositionComponent implements OnInit {
     }
   }
 
-  onSubmit(form: NgForm) {
-    let data = Object.assign({}, form.value);
-    delete data.id;
-    if (form.value.id == null)
-      this.pservice.addItems(data).subscribe(data=>{console.log(data);
-      this.router.navigate(['']);
-      })
-    else
-      this.pservice.updatePosition(data).subscribe(data=>{console.log(data);
-      this.router.navigate(['']);
-      })
-    this.resetForm(form);
-    this.toastr.success('Submitted successfully', 'EMP. Register');
-  }
+  // onSubmit(form: NgForm) {
+  //   let data = Object.assign({}, form.value);
+  //   delete data.id;
+  //   if (form.value.id == null)
+  //     this.pservice.addItems(data).subscribe(data=>{console.log(data);
+  //     this.router.navigate(['']);
+  //     })
+  //   else
+  //     this.pservice.updatePosition(data).subscribe(data=>{console.log(data);
+  //     this.router.navigate(['']);
+  //     })
+  //   this.resetForm(form);
+  //   this.toastr.success('Submitted successfully', 'EMP. Register');
+  // }
 
 }

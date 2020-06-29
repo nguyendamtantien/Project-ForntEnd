@@ -14,13 +14,7 @@ export class PositionService {
 		return this.http.get<Position[]>('http://localhost:8000/api/position/');
   }
   addItems(position: Position){
-    return this.http.post('http://localhost:8000/api/insert', position);
-  }
-  deletePosition(id: string){
-    return this.http.delete('http://localhost:8000/api/position' +id)
-  }
-  updatePosition(position: Position){
-    return this.http.put('http://localhost:8000/api/position'+ position.id, position);
+    return this.http.post('http://localhost:8000/api/position/insert', position);
   }
   
 }

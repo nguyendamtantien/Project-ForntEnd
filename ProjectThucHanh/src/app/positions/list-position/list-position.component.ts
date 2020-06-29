@@ -20,12 +20,12 @@ export class ListPositionComponent implements OnInit {
   onEdit(pos: Position) {
     this.pservice.formdata = Object.assign({}, pos);
   }
-  onDelete(pos: Position) {
-    if (confirm("Are you sure to delete this record?")) {
-      this.pservice.deletePosition(pos.id).subscribe(data=>{
-        console.log(data);
-      })
-      this.toastr.warning('Deleted successfully','EMP. Register');
-    }
-  }
+  // onDelete(pos: Position) {
+  //   if (confirm("Are you sure to delete this record?")) {
+  //     this.pservice.deletePosition(pos.id).subscribe(pos=>{
+  //       console.log(pos);
+  //     })
+  //     this.toastr.warning('Deleted successfully','EMP. Register');
+  //   }
+  // }
 }

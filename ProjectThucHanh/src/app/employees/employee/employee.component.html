@@ -1,4 +1,4 @@
-<h1 class="display-4">EMP. Register</h1>
+<h1 class="display-4">EMP Register</h1>
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
   <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
   <div class="form-group">
@@ -18,9 +18,25 @@
       <input name="mobile" #mobile="ngModel" [(ngModel)]="service.formData.mobile" class="form-control" placeholder="Mobile" required>
       <div *ngIf="mobile.invalid && mobile.touched" class="validation-error">This field is required.</div>
     </div>
+    <div class="form-group  col-md-6">
+      <select name="status" #status="ngModel" [(ngModel)]="service.formData.status" class="form-control">
+        <option value="true">true</option>
+        <option value="false">false</option>
+      </select>
+    </div>
   </div>
   <div class="form-group">
     <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
   </div>
 
 </form>
+<!-- <script>
+  function check() {
+    document.getElementById("myCheck").checked = true;
+  }
+  
+  function uncheck() {
+    document.getElementById("myCheck").checked = false;
+  }
+</script> -->
+  

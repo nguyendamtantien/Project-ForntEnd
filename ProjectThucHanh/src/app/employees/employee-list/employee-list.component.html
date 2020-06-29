@@ -1,11 +1,12 @@
 <div class="search-hero">
-  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search Key Word">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search Key Word...">
 </div>
 <table class="table table-hover">
     <thead>
-      <th>Name</th>
+      <th>ID - Name</th>
       <th>Position</th>
       <th>Mobile</th>
+      <th>Status</th>
       <th></th>
     </thead>
     <tbody>
@@ -13,6 +14,7 @@
         <td (click)="onEdit(emp)">{{emp.empCode}} - {{emp.fullName}}</td>
         <td (click)="onEdit(emp)">{{emp.position}}</td>
         <td (click)="onEdit(emp)">{{emp.mobile}}</td>
+        <td (click)="onEdit(emp)"[ngStyle]="{'color': emp.status==='false' ? 'red' : 'blue' }">{{emp.status}}</td>
         <td><a class="btn text-danger" (click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a></td>
       </tr>
     </tbody>
