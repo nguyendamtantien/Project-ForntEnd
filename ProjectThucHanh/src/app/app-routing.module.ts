@@ -19,7 +19,7 @@ const routes: Routes = [
   canActivate:[AuthGuard],
   children:[
     {path:"positions", component: PositionsComponent},         
-    {path:"employees", component: EmployeesComponent}, 
+    {path:"products", component: EmployeesComponent}, 
     {path:"admin", component: MainComponent},   
     {path:"profile", component: ProfileComponent},
     {path:"", component: EmployeeListComponent},
